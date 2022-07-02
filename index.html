@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- 
+Hey 👋 I'm Sarah Roff, developer of this site! 
+
+A little bit about me...
+
+    - I'm a full time highschool student from Toronto, Canada
+    - I do freelance front-end development on the side (currently working on my fullstack skills as well!)
+    - I'm an innovater @ The Knowledge Society
+    - I'm super passionate about blockchain/web3!
+
+You can find me on any of the platforms listed below, or shoot me an email at sarahroff2006@gmail.com, I'd love to hear from you!
+
+    GitHub: https://github.com/sarahvroff
+    LinkedIn: https://www.linkedin.com/in/sarahroff/
+    Twitter: https://twitter.com/SarahRoff27
+    Medium: https://medium.com/@sarahroff
+    Instagram: https://www.instagram.com/sarah.vroff/
+    Telegram: @sarahroff
+    Discord: sarah.vroff #2765
+
+“Truth can only be found in one place: the code.”
+    - Robert C. Martin
+-->
+
+<!-- 
+TIMELINE :
+Other 
+    - Create 'editing doc' icon
+Contact - April 23rd
+    - Use FormSubmit
+Bugs - 27th
+LAUNCH - May 1st
+- add reCAPTCHA
+-->
+
+<!-- 
+BUG LIST:
+ - burger menu only works when scrolled at the top
+    - no clue
+ - services animation shouldnt play when on small screen
+    - no clue
+-->
+
+<html lang='en'>
+
+    <head>
+        <!-- DEFINING VIEWPORT -->
+        <meta name="viewport" content='width=device-width, initial-scale=1'>  
+        <!-- CSS STYLESHEET -->
+        <link rel="stylesheet" href='./style.css'>
+        <!-- GOOGLE FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@100;300;400;600;700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <!-- FONT-AWESOME ICONS -->
+        <script src="https://kit.fontawesome.com/ed945f36dd.js" crossorigin="anonymous"></script>
+        <!-- JQUERY LIBRARY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- ANIMATE.CSS LIBRARY -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+
+    <body>
+
+        <!-- LOTTIE LOADING ANIMATION -->
+        <script>
+            $(window).on("load", function () {
+                $(".loader-wrapper").fadeOut("slow");
+            })
+        </script>
+
+        <div class='loader-wrapper'>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_etrihmcx.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        </div>
+        
+        <!-- NAVIGATION -->
+        <nav class="default-nav">
+             <!-- LOGO & NAME -->
+            <a href='#' class='left-buttons' id='company-name'>Morris Valentyne <span>Inc.</span></a>
+            <a href='#' class='left-buttons' id='logo'><img src='./resources/navigation-images/logo.jpg' width='57px' height='auto' alt='logo'/></a>
+            <!-- BUTTONS -->
+            <a href='#contact' class='right-buttons' id='contact-button'>Contact</a>
+            <a href='#about' class='right-buttons'>About</a>
+            <a href='#services' class='right-buttons'>Services</a>
+            <!-- BURGER MENU -->
+            <a class="icon" >
+                <i href="javascript:void(0);" onclick="burgerMenu()" class="fa-solid fa-bars fa-xl"></i>
+            </a>
+        </nav>
+
+        <script>
+            //SWITCH TO 'X' ICON 
+            $(document).ready(function () {
+                $('i').click(function () {
+                    $(this).toggleClass('fa-solid fa-x fa-solid fa-bars');
+                });
+            });
+        </script>
+
+        <main>
+            <!-- HERO SECTION -->
+            <section class='hero'>
+                <h1 class="animate__animated animate__fadeInLeft">Elevate your <br>content.</h1>
+                <!-- UPPER ROW -->
+                <div class='row1'><img id='row1-img1' src='./resources/hero-images/hero-img8.jpg' alt=''/></div>
+                <div class='row1'><img id='row1-img2' src='./resources/hero-images/hero-img4.png' alt=''/></div>
+                <div class='row1'><img id='row1-img3' src='./resources/hero-images/hero-img2.png' alt=''/></div>
+                <div class='row1'><img id='row1-img4' src='./resources/hero-images/hero-img3.jpeg' alt=''/></div>
+                <div class='row1'><img id='row1-img5' src='./resources/hero-images/hero-img8.jpg' alt=''/></div>
+                <div class='row1'><img id='row1-img6' src='./resources/hero-images/hero-img6.jpeg' alt=''/></div>
+                <div class='row1'><img id='row1-img7' src='./resources/hero-images/hero-img7.jpg' alt=''/></div>
+                <div class='row1'><img id='row1-img8' src='./resources/hero-images/hero-img1.png' alt=''/></div>
+                <!-- LOWER ROW -->
+                <div class='row2'><img id='row2-img2' src='./resources/hero-images/hero-img5.jpeg' alt=''/></div>
+                <div class='row2'><img id='row2-img3' src='./resources/hero-images/hero-img7.jpg' alt=''/></div>
+                <div class='row2'><img id='row2-img4' src='./resources/hero-images/hero-img1.png' alt=''/></div>
+                <div class='row2'><img id='row2-img5' src='./resources/hero-images/hero-img2.png' alt=''/></div>
+                <div class='row2'><img id='row2-img6' src='./resources/hero-images/hero-img3.jpeg' alt=''/></div>
+                <div class='row2'><img id='row2-img7' src='./resources/hero-images/hero-img2.png' alt=''/></div>
+                <!-- MOBILE GRAPHIC -->
+                <img id='icon' src='./resources/hero-images/Document-Graphic-Example.jpg' alt=''/>
+            </section>
+
+            <!-- SERVICES -->
+            <section class='services' id='services'>
+                <h2 class="gs_reveal">Services</h2>
+                <div class='container'>
+                    <div class='row gs_reveal'>
+                        <!-- SERVICE 1 -->
+                        <div class="gs_reveal gs_reveal_fromRight">
+                            <img src='./resources/services-images/service-icon1.png' alt=''/>
+                            <h3 id="service-1" >Content Development <br>and Creation</h3>
+                            <p>Curated content brought to life from idea generation to production. Storytelling that connects with the audience.</p>
+                        </div>
+                        <!-- SERVICE 2 -->
+                        <div style='z-index: 10;'>
+                            <img src='./resources/services-images/service-icon2.png' alt=''/>
+                            <h3>Editorial Management</h3>
+                            <p>Full service story development from concept to design to publishing. Leading creative teams to deliver high-quality, award-winning content.</p>
+                        </div>
+                        <!-- SERVICE 3 -->
+                        <div class="gs_reveal gs_reveal_fromLeft">
+                            <img src='./resources/services-images/service-icon3.png' alt=''/>
+                            <h3>Writing and Editing</h3>
+                            <p>Telling impactful stories that engage, inspire and educate. Ensuring high standards through consistency, attention to detail and exceptional skill.</p>
+                        </div>
+                    </div>
+                    <div class='row gs_reveal'>
+                        <!-- SERVICE 4 -->
+                        <div class="gs_reveal gs_reveal_fromRight">
+                            <img src='./resources/services-images/service-icon4.png' alt=''/>
+                            <h3>Social Media</h3>
+                            <p>Reaching audiences through myriad platforms to leverage and cross-promote content. Creating a conversation that builds brand recognition and establishes trust.</p>
+                        </div>
+                        <!-- SERVICE 5 -->
+                        <div style='z-index: 10;'>
+                            <img src='./resources/services-images/service-icon5.png' alt=''/>
+                            <h3>Corporate Communications</h3>
+                            <p>From crafting key messages to issues management to stakeholder communications, content designed to achieve organizational goals and increase brand identity.</p>
+                        </div>
+                        <!-- SERVICE 6 -->
+                        <div class="gs_reveal gs_reveal_fromLeft">
+                            <img src='./resources/services-images/service-icon6.png' alt=''/>
+                            <h3>Media and Public Relations</h3>
+                            <p>Creating an effective strategy that embodies corporate responsibility, compassion, determination and grit. Cultivating relationships with media and serving the public with knowledge, perspective and transparency.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class='about'>
+                    <div>
+                        <!-- HEADSHOT -->
+                        <div class="gs_reveal gs_reveal_fromLeft img-container">
+                            <img src='./resources/about-images/about-headshot-modified.png' width = '470px' alt='headshot'/>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- TITLE -->
+                        <div>
+                            <h2 id='about' class="gs_reveal gs_reveal_fromRight">Past Experience</h2>
+                        </div>
+                        <!-- TIMELINE -->
+                        <div class="timeline"></div>
+                        <!-- EXPERIENCES -->
+                        <div class="info">
+                            <h3 class="gs_reveal gs_reveal_fromBottom">Wahi | Director of Content</h3>
+                                <p class="gs_reveal gs_reveal_fromBottom">Lead team of proffesional writers and copywriters<br> deleivering fresh real estate insights and knowledge</p>
+                            <h3 class="gs_reveal gs_reveal_fromBottom">Ontario College of Teachers | Senior Communications<br>Officer and Managing Editor</h3>
+                                <p class="gs_reveal gs_reveal_fromBottom">Oversaw all planning, producing, and publishing English<br> and French publications with 240K total circulation.<br> Led team of editors, professional writers, and designers.</p>
+                            <h3 class="gs_reveal gs_reveal_fromBottom">Advocis | Communications and Media Relations<br>Director and Editor of FORUM Magazine</h3>
+                                <p class="gs_reveal gs_reveal_fromBottom">Gave strategic communications counsel and planning<br> input to CEO, chair of Board of Directors, and executive<br> management team, handling issues impacting<br> members and clients.</p>
+                        </div>
+                </div>
+                
+                <!-- FULL RESUME BUTTON -->
+                <p id="resume-button" class="gs_reveal"><a href="https://drive.google.com/file/d/1DiBfKWMzzcK91pPpKihHwI7_4cF95nco/view?usp=sharing" target="_" class='link'>See Full Resume</a></p>
+                
+                <!-- GET IN TOUCH -->
+                <div class='get-in-touch-container'>
+                    <p id="get-in-touch">Get in Touch</p>
+                    <div class="line"></div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class='contact'>
+                <!-- FORM -->
+                <div class="contact-form">
+                    <form action='https://formsubmit.co/sarahroff2006@gmail.com' method='POST'>
+                        <h3 id='contact' style="margin-left: 15px;">Let's work together!</h3>
+                        <label for='name' style="margin-left: 15px;">NAME</label>
+                            <input type='text' id='name' name='name' required>
+                        <label for='email' style="margin-left: 15px;">EMAIL</label>
+                            <input type='text' id='email' name='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required size="52"><br>
+                        <label for='message' style="margin-left: 15px;">MESSAGE</label><br>
+                            <textarea rows="5" cols="90" id='message' name='message' placeholder='Type Here' required style="margin-left: 15px;"></textarea>
+                        <br>
+                            <input id='submit' type='submit' value='Submit'>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class='footer-container'>
+                <p id="footer-company-name">Morris Valentyne<span> Inc.</span></p>
+                <p id="phone-number">(647)-470-6577</p>
+                <div id="footer-line" ></div>
+                <a href='https://twitter.com/KristinDoucet4' class='social-media' target='_'><img src='resources/footer-images/twitter-logo.png' alt='twitter' style='margin-right: 150px; width: 55px;'/></a>
+                <a href='https://www.facebook.com/kristin.doucet.7' class='social-media' target='_'><img src='./resources/footer-images/facebook-logo.png' alt='facebook' style='width: 53px;'/></a>
+                <a href='linkedin.com/in/kristindoucet/' class='social-media' target='_'><img src='./resources/footer-images/linkedin-logo.png' alt='linkedIn'/></a>
+                <p id="copyright">© 2022 Morris Valentyne Inc.</p>
+                <a href="https://www.linkedin.com/in/sarahroff/" target="_"><p id="website-credit"><em>Website: Sarah Roff</em></p></a>
+            </div>
+        </footer>
+
+        <!-- IMPORTING GSAP-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+        <!-- IMPORTING SCROLL TRIGGER MODULE-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+
+        <!-- JAVASCRIPT FILE -->
+       <script src="./script.js"></script>
+
+    </body>
+    
+</html>
